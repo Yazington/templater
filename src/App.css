@@ -2,18 +2,33 @@ body {
   margin: 0;
   /* Make sure the background is not opaque so the rounded corners are visible */
   background: transparent;
+  overflow: hidden;
+  /* vh = viewport height, ensures body takes full window height */
+  height: 100vh;
+  /* vw = viewport width, includes scrollbar width which is fine since we have overflow: hidden */
+  width: 100vw;
 }
+
 .app-container {
   margin: 0;
-
-  width: 100%;
-  height: 100%;
+  /* Match parent dimensions */
+  width: 100vw;
+  height: 100vh;
   background-color: rgb(28, 28, 28);
+  /* Enable flexbox layout */
+  display: flex;
+  /* Stack children vertically (window controls above content) */
+  flex-direction: column;
 }
+
 .content-container {
   margin: 0;
-
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  /* flex: 1 tells this container to:
+     - grow: 1 (take all available space)
+     - shrink: 1 (can get smaller if needed)
+     - basis: 0 (start from zero height)
+     This makes it fill all remaining vertical space after window controls */
+  flex: 1;
   background-color: rgb(28, 28, 28);
 }

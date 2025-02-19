@@ -36,7 +36,8 @@ export default [
       'prettier/prettier': [
         'error',
         {
-          printWidth: 200
+          printWidth: 200,
+          endOfLine: 'lf'
         }
       ]
     }
