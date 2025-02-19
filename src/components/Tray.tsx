@@ -24,11 +24,9 @@
 
 // const tray = await TrayIcon.new(options);
 
-
-
 // function Tray() {
 //   const [visible, setVisible] = useState(tray.);
-  
+
 //   useEffect(() => {
 //     // Listen for window visibility toggle
 //     const unlisten = listen("toggle-ui", () => {
